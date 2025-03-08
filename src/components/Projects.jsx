@@ -13,6 +13,7 @@ function Projects({ projects }) {
   useEffect(() => {
     setCollection(getCollection());
   }, [projects, end]);
+
   return (
     <div className="flex flex-col px-6">
       <div className="flex justify-center items-center flex-wrap gap-5">
@@ -51,11 +52,6 @@ function ProjectCard({ project, id }) {
             <h2>{project.title}</h2>
             <div className="flex flex-col">
               <div className="flex justify-between items-center">
-                {/* <Identicon
-                  string="0x15...1ea2"
-                  size={15}
-                  className="rounded-full shadow-md"
-                /> */}
                 <small className="text-gray-700">
                   {truncate(project.owner)}
                 </small>
@@ -63,10 +59,10 @@ function ProjectCard({ project, id }) {
               <small className="text-gray-500">
                 {new Date().getTime() > Number(project.expiresAt + "000")
                   ? "Expired"
-                  : daysRemaining(Number(project.expiresAt))}{" "}
+                  : daysRemaining(Number(project.expiresAt)) + " left"}
               </small>
             </div>
-            <div className="w-full bg-gray-300">
+            <div className="w-full bg-gray-300 overflow-hidden">
               <div
                 className="text-xs font-medium text-center p-0.5 h-1 rounded-l-full bg-green-600"
                 style={{ width: `${(project.raised / project.cost) * 100}` }}

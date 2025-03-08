@@ -211,10 +211,17 @@ const backProject = async (id, amount) => {
     alert("An error occurred while backing the project.");
   }
 };
-
+const payoutProject = async (id) => {
+  if (!ethereum) return alert("Please enter MetaMask");
+  const connectedAccount = getGlobalState("connectedAccount");
+  const contract = await getEtheriumContract();
+  await contract.payOutProject(id, {
+    from: connectedAccount,
+  });
+};
 const getBackers = async (id) => {
   try {
-    if (!ethereum) return alert("Please enter metamsk");
+    if (!ethereum) return alert("Please enter MetaMask");
     const contract = await getEtheriumContract();
     let backers = await contract.getBackers(id);
     setGlobalState("backers", structuredBackers(backers));
@@ -275,4 +282,5 @@ export {
   deleteProject,
   backProject,
   getBackers,
+  payoutProject,
 };

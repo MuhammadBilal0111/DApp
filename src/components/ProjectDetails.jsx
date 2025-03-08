@@ -5,7 +5,7 @@ import {
   truncate,
   useGlobalState,
 } from "../store";
-// import { payoutProject } from "../services/blockchain";
+import { payoutProject } from "../services/blockchain";
 
 const ProjectDetails = ({ project }) => {
   const [connectedAccount] = useGlobalState("connectedAccount");
@@ -98,7 +98,6 @@ const ProjectDetails = ({ project }) => {
                     Back Project
                   </button>
                 ) : null}
-
                 {connectedAccount == project?.owner ? (
                   project?.status != 3 ? (
                     project?.status == 1 ? (
@@ -107,7 +106,7 @@ const ProjectDetails = ({ project }) => {
                         className="inline-block px-6 py-2.5 bg-orange-600
                         text-white font-medium text-xs leading-tight uppercase
                         rounded-full shadow-md hover:bg-orange-700"
-                        // onClick={() => payoutProject(project?.id)}
+                        onClick={() => payoutProject(project?.id)}
                       >
                         Payout
                       </button>
