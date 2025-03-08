@@ -135,16 +135,22 @@ const loadProject = async (id) => {
     throw new Error(error);
   }
 };
-const updateProject = async ({ id, title, description, image, expiresAt }) => {
+const updateProject = async ({
+  id,
+  title,
+  description,
+  imageURL,
+  expiresAt,
+}) => {
   try {
     if (!ethereum) return alert("Please install Metamask");
     const contract = await getEtheriumContract();
-    console.log(contract);
+    console.log("edit", contract);
     const tx = await contract.updateProject(
       id,
       title,
       description,
-      image,
+      imageURL,
       expiresAt
     );
     await tx.wait();

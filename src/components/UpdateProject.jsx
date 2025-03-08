@@ -22,8 +22,8 @@ function UpdateProjects({ project }) {
       id: project?.id,
       title,
       description,
-      expiresAt: toTimestamp(date),
       imageURL,
+      expiresAt: toTimestamp(date),
     };
 
     await updateProject(params);
