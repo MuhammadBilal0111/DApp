@@ -1,12 +1,16 @@
-# React + Vite
+# 🚀 Learning to Build Decentralized Applications (DApps)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview  
+In this repo complete learning how to build **Decentralized Applications (DApps)** using blockchain technology. This journey involves understanding **smart contracts**, **Web3 technologies**, and **decentralized storage** to create secure and trustless applications.
 
-Currently, two official plugins are available:
+## 📚 Topics Covered  
+- 🏗 **Blockchain & Ethereum** fundamentals  
+- 💻 **Solidity** for writing smart contracts  
+- 🛠 **Hardhat & Remix** for contract deployment  
+- 🔗 **Web3.js & Ethers.js** for blockchain interaction  
+- 🎨 **React.js & TailwindCSS** for UI development  
+- 🏦 **MetaMask & Wallet Integration**  
+- 📂 **IPFS & Decentralized Storage**  
+- 🔐 **Security Best Practices** in DApp Development  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Stay tuned for more updates as I continue my **DApp development journey!** 🚀  
